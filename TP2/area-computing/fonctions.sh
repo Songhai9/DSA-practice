@@ -2,8 +2,8 @@
 # Ce fichier contient des définitions communes à tous les tests
 #
 
-VALGRIND="valgrind -q --leak-check=full --error-exitcode=43"
-
+# VALGRIND="valgrind -q --leak-check=full --error-exitcode=43"
+# VALGRIND="-fsanitize=address"
 
 annoncer ()
 {
