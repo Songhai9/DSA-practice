@@ -26,7 +26,7 @@ touch "$LOG"
 #
 
 annoncer "Compilation"
-rm $TARGET
+# rm $TARGET
 make $TARGET >> $LOG 2>&1 || fail
 coloredEcho "OK" green
 
