@@ -1,0 +1,23 @@
+
+####
+#### Compilation
+####
+gcc -Wall -Wextra -g -c linked-list.c -o linked-list.o
+gcc -Wall -Wextra -g -c tests.c -o tests.o
+gcc -Wall -Wextra -g -o tests linked-list.o tests.o
+
+####
+#### Execution
+####
+test_allocError
+Done
+test_allocError2
+Done
+test_createList
+Done
+test_getSize
+Done
+test_getValue
+Done
+test_setValue
+Done
