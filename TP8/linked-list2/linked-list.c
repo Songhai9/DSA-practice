@@ -107,7 +107,6 @@ void insertNode(Node **root, unsigned long idx, int value)
 
     insertedNode->value = value;
 
-    // Cas où l'indice est 0 (insertion en tête)
     if (idx == 0)
     {
         insertedNode->next = *root;
@@ -115,11 +114,10 @@ void insertNode(Node **root, unsigned long idx, int value)
         return;
     }
 
-    // Parcours pour trouver le nœud précédent
     Node *current = *root;
     for (unsigned long i = 0; i < idx - 1; i++)
     {
-        if (current == NULL) // Si l'indice est invalide
+        if (current == NULL)
         {
             free(insertedNode);
             return;
@@ -127,7 +125,6 @@ void insertNode(Node **root, unsigned long idx, int value)
         current = current->next;
     }
 
-    // Insertion après le nœud trouvé
     if (current != NULL)
     {
         insertedNode->next = current->next;
@@ -135,7 +132,7 @@ void insertNode(Node **root, unsigned long idx, int value)
     }
     else
     {
-        free(insertedNode); // Si l'indice dépasse la taille
+        free(insertedNode);
     }
 }
 
