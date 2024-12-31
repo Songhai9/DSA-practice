@@ -1,0 +1,34 @@
+
+####
+#### Compilation
+####
+rm -f tests.o array-list.o tests
+gcc -Werror -Wall -Wextra -g -c tests.c -o tests.o
+gcc -Werror -Wall -Wextra -g -c array-list.c -o array-list.o
+gcc -Werror -Wall -Wextra -g -o tests tests.o array-list.o
+
+####
+#### Execution avec Valgrind
+####
+test_create
+Done
+test_size
+Done
+test_prepend
+Done
+test_size2
+Done
+test_get2
+Done
+test_set
+Done
+test_take
+Done
+test_insert
+Done
+test_error_malloc
+Done
+test_error_malloc2
+Done
+test_error_malloc3
+Done
